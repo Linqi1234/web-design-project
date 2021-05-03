@@ -3,6 +3,74 @@ body {
 	height: 2000px;
 }
 
+a, u {
+	text-decoration: none;
+	color: white;
+}
+
+.menu {
+	position: absolute;
+	bottom: 0px;
+	left: 400px;
+	visibility: hidden;
+}
+
+.nav {
+	display: flex;
+	height: 50px;
+	align-items: center;
+}
+
+.nav .item {
+	margin-left: 20px;
+	margin-right: 20px;
+	font-family: "PingFangSC-Regular";
+	font-size: 18px
+}
+
+.nav .item:last-child {
+	margin-left: auto;
+}
+
+input,button {
+	border: none;
+	outline: none;
+}
+
+input {
+	border: 2px solid #c5464a;
+	border-radius: 3px 0px 0px 3px;
+	border-width: 0;
+	font-size: 18px;
+	background: white;
+}
+
+button {
+	background-color: rgb(115,10,14);
+	border-radius:0 3px 3px 0;
+	width: 60px;
+	height: 23px;
+	font-size: 14px;
+	color: white;
+}
+
+.searchbar {
+	display: flex;
+}
+
+.main {
+	margin-left: 30px;
+	font-size: 45px;
+	font-family: "KaiTi", "STKaiti";
+	font-weight: bold;
+}
+
+.secondary {
+	margin-left: 50px;
+	margin-top: 10px;
+	font-size: 21px;
+}
+
 .poster {
 	background-image: url('./image/image1.jpg');
 	background-size: auto 120%;

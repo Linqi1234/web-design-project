@@ -34,6 +34,7 @@ function setHeaderMode() {
 	let current = viewheight - headerHeight;
 	let poster = document.getElementById('poster');
 	let title = document.getElementById('title');
+	let menu = document.getElementById('menu');
 	const percent = current / viewheight;
 	const fontSize = 30 + (100 - 30) * (1 - percent);
 	poster.style.position = "fixed";
@@ -44,6 +45,7 @@ function setHeaderMode() {
 	title.style.fontSize = fontSize + "px";
 	title.style.left = viewwidth * (1 - percent) / 2 - 2 * fontSize + percent * 50 + "px";
 	title.style.top = current + (viewheight - current) / 2 - title.getBoundingClientRect().height / 2 + "px";
+	menu.style.visibility = 'visible';
 }
 
 function getHeaderSpace() {
@@ -56,6 +58,8 @@ window.addEventListener('scroll', (event) => {
 	let headerSpace = getHeaderSpace();
 	if (headerSpace > headerHeight) {
 		mode = 'fancy';
+		let menu = document.getElementById('menu');
+	menu.style.visibility = 'hidden';
 		updateBlurEffect()
 		updateCharacterPostion();
 	} else {
