@@ -1,4 +1,4 @@
-const headerHeight = 80;
+const headerHeight = 65;
 let mode = "fancy";
 
 function updateBlurEffect() {
@@ -23,7 +23,7 @@ function updateCharacterPostion() {
 	title.style.display = "block";
 	title.style.position = "relative";
 	title.style.fontSize = fontSize + "px";
-	title.style.left = viewwidth * (1 - percent) / 2 - fontSize + "px";
+	title.style.left = viewwidth * (1 - percent) / 2 - 2 * fontSize + percent * 50 + "px";
 	title.style.top = current + (viewheight - current) / 2 - title.getBoundingClientRect().height / 2 + "px";
 }
 
@@ -34,7 +34,7 @@ function setHeaderMode() {
 	let current = viewheight - headerHeight;
 	let poster = document.getElementById('poster');
 	let title = document.getElementById('title');
-	const percent = (viewheight - headerHeight) / viewheight;
+	const percent = current / viewheight;
 	const fontSize = 30 + (100 - 30) * (1 - percent);
 	poster.style.position = "fixed";
 	poster.style.width = "100%";
@@ -42,7 +42,7 @@ function setHeaderMode() {
 	title.style.display = "block";
 	title.style.position = "relative";
 	title.style.fontSize = fontSize + "px";
-	title.style.left = viewwidth * (1 - percent) / 2 - fontSize + "px";
+	title.style.left = viewwidth * (1 - percent) / 2 - 2 * fontSize + percent * 50 + "px";
 	title.style.top = current + (viewheight - current) / 2 - title.getBoundingClientRect().height / 2 + "px";
 }
 
