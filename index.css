@@ -1,0 +1,25 @@
+body {
+	margin: 0px;
+	height: 2000px;
+}
+
+.poster {
+	background-image: url('./image/image1.jpg');
+	background-size: auto 120%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 100vh;
+}
+
+.blur-holder {
+	backdrop-filter: blur(5px);
+	width: 100%;
+	height: 100%;
+}
+
+.title {
+	font-family: "KaiTi", "STKaiti";
+	font-size: 100px;
+	font-weight: 900;
+	color: white;
+}
