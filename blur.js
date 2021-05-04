@@ -1,13 +1,17 @@
 const headerHeight = 65;
 let mode = "fancy";
 
-function updateBlurEffect() {
-	let current = window.scrollY;
+function updateBlurEffectFromCustomScrollY(y) {
 	const viewheight = document.getElementById('poster').getBoundingClientRect().height;
-	const percent = current / viewheight;
+	const percent = y / viewheight;
 	let blurer = document.getElementById('blurer');
 	let px = percent * 100 * 1 + 5 + 'px'
 	blurer.style.backdropFilter = `blur(${px})`;
+}
+
+function updateBlurEffect() {
+	let current = window.scrollY;
+	updateBlurEffectFromCustomScrollY(current);
 }
 
 function updateCharacterPostion() {
@@ -35,6 +39,7 @@ function setHeaderMode() {
 	let poster = document.getElementById('poster');
 	let title = document.getElementById('title');
 	let menu = document.getElementById('menu');
+	let holder = document.getElementById('headerSpaceHolder');
 	const percent = current / viewheight;
 	const fontSize = 30 + (100 - 30) * (1 - percent);
 	poster.style.position = "fixed";
@@ -46,6 +51,8 @@ function setHeaderMode() {
 	title.style.left = viewwidth * (1 - percent) / 2 - 2 * fontSize + percent * 50 + "px";
 	title.style.top = current + (viewheight - current) / 2 - title.getBoundingClientRect().height / 2 + "px";
 	menu.style.visibility = 'visible';
+	updateBlurEffectFromCustomScrollY(current);
+	holder.style.height = viewheight + "px";
 }
 
 function getHeaderSpace() {
@@ -59,7 +66,9 @@ window.addEventListener('scroll', (event) => {
 	if (headerSpace > headerHeight) {
 		mode = 'fancy';
 		let menu = document.getElementById('menu');
-	menu.style.visibility = 'hidden';
+		let holder = document.getElementById('headerSpaceHolder');
+		menu.style.visibility = 'hidden';
+		holder.style.height = "0px";
 		updateBlurEffect()
 		updateCharacterPostion();
 	} else {
