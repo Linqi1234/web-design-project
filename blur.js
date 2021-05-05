@@ -40,6 +40,7 @@ function setHeaderMode() {
 	let title = document.getElementById('title');
 	let menu = document.getElementById('menu');
 	let holder = document.getElementById('headerSpaceHolder');
+	holder.style.height = viewheight + "px";
 	const percent = current / viewheight;
 	const fontSize = 30 + (100 - 30) * (1 - percent);
 	poster.style.position = "fixed";
@@ -52,7 +53,6 @@ function setHeaderMode() {
 	title.style.top = current + (viewheight - current) / 2 - title.getBoundingClientRect().height / 2 + "px";
 	menu.style.visibility = 'visible';
 	updateBlurEffectFromCustomScrollY(current);
-	holder.style.height = viewheight + "px";
 }
 
 function getHeaderSpace() {
