@@ -79,3 +79,4 @@ window.addEventListener('scroll', (event) => {
 })
 
 updateCharacterPostion();
+
