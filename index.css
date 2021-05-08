@@ -2,7 +2,7 @@ body {
 	margin: 0px;
 	height: 2000px;
 	font-family: "PingFangSC-Regular"; 
-	background-color: #e6d9d1;
+	background-color:#f5ede9;
 }
 
 a, u {
@@ -84,6 +84,7 @@ button {
 	background-repeat: no-repeat;
 	background-position: center center;
 	height: 100vh;
+	z-index: 100;
 }
 
 .blur-holder {
