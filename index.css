@@ -2,10 +2,9 @@ body {
 	margin: 0px;
 	height: 2000px;
 	font-family: "PingFangSC-Regular"; 
-	background-color:#f5ede9;
 }
 
-a, u {
+.item a, u {
 	text-decoration: none;
 	color: white;
 }
@@ -72,11 +71,6 @@ button {
 	font-weight: bold;
 }
 
-.secondary {
-	margin-left: 50px;
-	margin-top: 10px;
-	font-size: 21px;
-}
 
 .poster {
 	background-image: url('./image/header.jpg');
@@ -119,51 +113,50 @@ water {
 	flex-direction: column;
 }
 
+.card {
+	background: rgba(255, 255, 255);
+	border-radius: 5px;
+}
+
 [g1] {
 	grid-row: span 3;
+	background-color: rgb(244,244,244);
+	border-radius: 0px;
 }
 
 [g2] {
-	grid-row: span 18;
+	grid-row: span 14;
 }
 
 [g3] {
-	grid-row: span 11;
+	grid-row: span 3;
+	border-radius: 0px;
+	/*background-color: rgba(100,42,21,0.3);*/
+	background-image: url(./image/img14.jpg);
+	background-size: 100%;
 }
 
 [g4] {
-	grid-row: span 13;
+	grid-row: span 9;
 }
 
 [g5] {
-	grid-row: span 15;
+	grid-row: span 12;
 }
 
 [g6] {
-	grid-row: span 8;	
+	grid-row: span 15;	
 }
 
 [g7] {
-	grid-row: span 16;
+	grid-row: span 11;
 }
 
 [g8] {
 	grid-row: span 12;
+	border-radius: 0px;
 }
 
-.card {
-	background: rgba(255, 255, 255, 0.9);
-	border-radius: 5px;
-}
-
-.card-1 {
-	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-
-.card-1:hover {
-	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
 
 .card-2 {
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -201,20 +194,16 @@ water {
 	margin-right: 10px;
 }
 
-img {
-	opacity: 0.9;
-	display: block;
-}
 
 .img {
 	width: 100%;
-	background-color: #e6d9d1;
 }
 
 .p {
 	padding: 10px;
 	font-size: 17px;
 	text-align: justify;
+	color: rgb(110,110,110);
 }
 
 .h2 {
@@ -225,8 +214,9 @@ img {
 	text-align: center;
 }
 
-.h3 {
-	font-size: 19px;
+.d3 {
+	font-size: 24px;
+	color: rgb(70,70,70);
 	padding-left: 7px;
 	font-style: italic;
 	text-align:9 center;
@@ -243,4 +233,110 @@ img {
 	font-size: 18px;
 	padding-top: 18px;
 	padding-left: 10px;
+}
+
+.a2 {
+	color: rgb(0,0,0);
+	font-size: 27px;
+	padding-left: 12px;
+	line-height: 0.8em;
+}
+
+.a3 {
+	padding-top: 24px;
+	padding-left: 23px;
+	padding-bottom: 7px;
+	font-size: 25px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.a1 {
+	font-size: 30px;
+	padding-top: 20px;
+	padding-left: 10px;
+}
+
+.b1 {
+	display: inline;
+	font-family: cursive;
+	font-size: 38px;
+	padding-left: 35px;
+	color: white;
+}
+
+.b2 {
+	display: inline;
+	font-family: cursive;
+	font-size: 40px;
+	color: white;
+	padding-left: 71px;
+}
+
+.a2 a {
+	color: black;
+	font-style: italic;
+}
+
+.a4 {
+	font-family: "KaiTi", "STKaiti";
+	font-size: 30px;
+	padding: 40px;
+	margin: 20px;
+	margin-top: 40px;
+	background-image: url('./image/img10.jpg');
+	background-size: 100%;
+	text-align: center;
+}
+
+.a5 {
+	font-size: 27px;
+	color: white;
+	font-family: "KaiTi", "STKaiti";
+	padding: 18px;
+	padding-top: 46px;
+	padding-bottom: 22px;
+	margin: 20px;
+	margin-top: 40px;
+	background-image: url('./image/img11.jpg');
+	background-size: 100%;
+}
+
+.a6 {
+	font-size: 27px;
+	color: white;
+	font-family: "KaiTi", "STKaiti";
+	padding: 18px;
+	padding-top: 46px;
+	padding-bottom: 22px;
+	margin: 20px;
+	margin-bottom: 54px;
+	margin-top: 40px;
+	background-image: url(./image/img13.jpg);
+	background-size: 100%;
+}
+
+.a4 a {
+	text-decoration: none;
+	color: black;
+}
+
+.a5 a {
+	text-decoration: none;
+	color: white;
+}
+
+.a6 a {
+	text-decoration: none;
+	color: white;
+}
+
+p {
+	font-size: 17px;
+	padding-left: 10px;
+}
+
+.d3 a {
+	color: rgb(70,70,70);
+
 }
